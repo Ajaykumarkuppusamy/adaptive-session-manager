@@ -1,0 +1,40 @@
+{
+  "name": "adaptive-session-manager",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "session",
+    "session-manager",
+    "auth",
+    "timeout",
+    "angular",
+    "react",
+    "idle",
+    "typescript"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "description": "A highly optimized, framework-agnostic session manager with a dynamic evaluation loop and lazy reset architecture.",
+  "devDependencies": {
+    "jsdom": "^24.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
+}
