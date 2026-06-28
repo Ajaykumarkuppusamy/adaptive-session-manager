@@ -32,6 +32,14 @@
   "author": "Antigravity",
   "license": "MIT",
   "description": "A highly optimized, framework-agnostic session manager with a dynamic evaluation loop and lazy reset architecture.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajaykumarkuppusamy/adaptive-session-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ajaykumarkuppusamy/adaptive-session-manager/issues"
+  },
+  "homepage": "https://github.com/Ajaykumarkuppusamy/adaptive-session-manager#readme",
   "devDependencies": {
     "jsdom": "^24.0.0",
     "typescript": "^5.4.0",

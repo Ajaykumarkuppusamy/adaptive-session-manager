@@ -19,9 +19,9 @@ Perfect for **Angular**, **React**, **Vue**, and **Vanilla JS** applications.
 
 ## 📦 Installation
 
-bash
+```bash
 npm install adaptive-session-manager
-
+```
 
 ---
 
@@ -29,7 +29,7 @@ npm install adaptive-session-manager
 
 The manager divides your session into dynamic zones. It checks activity less frequently when time is abundant, and more frequently as time runs out, culminating in the "Lazy Reset" critical zone.
 
-text
+```text
 0 min                  5 min                 10 min                13 min         15 min
  ├──────────────────────┼──────────────────────┼──────────────────────┼──────────────┤
  │      ZONE 1          │      ZONE 2          │      ZONE 3          │    ZONE 4    │
@@ -37,7 +37,7 @@ text
  ├──────────────────────┼──────────────────────┼──────────────────────┼──────────────┤
  │ Check once at 5m     │ Check every 2.5m     │ Check every 1m       │ Lazy Reset   │
  │                      │                      │                      │ (On Activity)│
-
+```
 
 ---
 
@@ -47,7 +47,7 @@ text
 
 *Pro-tip: Run the session tracking outside the Angular zone to prevent `mousemove` or `scroll` events from triggering constant UI re-rendering.*
 
-typescript
+```typescript
 import { Injectable, NgZone } from '@angular/core';
 import { AdaptiveSessionManager } from 'adaptive-session-manager';
 
@@ -79,13 +79,13 @@ export class SessionTrackingService {
     });
   }
 }
-
+```
 
 ### 2. React Implementation
 
 *Use inside a `useEffect` at the root of your application (e.g., `App.tsx` or an AuthProvider).*
 
-tsx
+```tsx
 import { useEffect } from 'react';
 import { AdaptiveSessionManager } from 'adaptive-session-manager';
 
@@ -108,11 +108,11 @@ export function useSessionTracker() {
     return () => manager.stop();
   }, []);
 }
-
+```
 
 ### 3. Vanilla JavaScript
 
-javascript
+```javascript
 import { AdaptiveSessionManager } from 'adaptive-session-manager';
 
 const sessionManager = new AdaptiveSessionManager({
@@ -128,7 +128,7 @@ const sessionManager = new AdaptiveSessionManager({
 });
 
 sessionManager.start();
-
+```
 
 ---
 
